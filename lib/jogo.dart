@@ -11,7 +11,7 @@ class jogo extends StatefulWidget {
 class _JogoState extends State<jogo> {
 
   var _imagemApp = AssetImage("imagens/padrao.png");
-  var _mensagem = "Escolha uma opção abaixo";
+  var _mensagem = "Escolha uma opção abaixo ⬇️";
 
   void _opcaoSelecionada(String escolhaUsuario){
 
@@ -48,7 +48,7 @@ class _JogoState extends State<jogo> {
         (escolhaUsuario == "papel" && escolhaApp == "pedra")
     ){
       setState(() {
-        this._mensagem = "Parabéns!!! Você ganhou!";
+        this._mensagem = "Parabéns!!! Você ganhou ✅ ";
       });
       //App Ganhador
     }else if(
@@ -57,11 +57,11 @@ class _JogoState extends State<jogo> {
         (escolhaApp == "papel" && escolhaUsuario == "pedra")
     ){
       setState(() {
-        this._mensagem = "Você perdeu!";
+        this._mensagem = "Você perdeu! ❌";
       });
     }else{
       setState(() {
-        this._mensagem = "Empatamos!";
+        this._mensagem = "Empatamos! 😛";
       });
     }
 
@@ -73,6 +73,7 @@ class _JogoState extends State<jogo> {
     return Scaffold(
       appBar: AppBar(
         title: Text("JokenPo"),
+        backgroundColor: Colors.amber,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
