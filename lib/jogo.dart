@@ -72,7 +72,7 @@ class _JogoState extends State<jogo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("JokenPo"),
+        title: Text("JokenPô"),
         backgroundColor: Colors.amber,
       ),
       body: Column(
