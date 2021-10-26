@@ -42,15 +42,13 @@ class _JogoState extends State<jogo> {
         break;
     }
 
-    //Validação do ganhador
-    //Usuario Ganhador
     if(
     (escolhaUsuario == "pedra" && escolhaApp == "tesoura") ||
         (escolhaUsuario == "tesoura" && escolhaApp == "papel") ||
         (escolhaUsuario == "papel" && escolhaApp == "pedra")
     ){
       setState(() {
-        this._mensagem = "Parabéns!!! Você ganhou :)";
+        this._mensagem = "Parabéns!!! Você ganhou!";
       });
       //App Ganhador
     }else if(
@@ -59,11 +57,11 @@ class _JogoState extends State<jogo> {
         (escolhaApp == "papel" && escolhaUsuario == "pedra")
     ){
       setState(() {
-        this._mensagem = "Você perdeu :(";
+        this._mensagem = "Você perdeu!";
       });
     }else{
       setState(() {
-        this._mensagem = "Empatamos ;)";
+        this._mensagem = "Empatamos!";
       });
     }
 
@@ -79,10 +77,6 @@ class _JogoState extends State<jogo> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          //1) text
-          //2) imagem
-          //3) text resultado
-          //4) Linha 3 imagens
           Padding(
             padding: EdgeInsets.only(top: 32, bottom: 16),
             child: Text(
@@ -121,11 +115,6 @@ class _JogoState extends State<jogo> {
                 onTap: () => _opcaoSelecionada("tesoura") ,
                 child: Image.asset("imagens/tesoura.png", height: 100,),
               )
-              /*
-              Image.asset("imagens/pedra.png", height: 100,),
-              Image.asset("imagens/papel.png", height: 100,),
-              Image.asset("imagens/tesoura.png", height: 100,)
-              */
             ],
           )
         ],
